@@ -36,6 +36,8 @@ namespace ISModeling {
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,6 +103,19 @@ namespace ISModeling {
             this.label17 = new System.Windows.Forms.Label();
             this.chartTriangle = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.chartNormal = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRandom)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -117,6 +132,8 @@ namespace ISModeling {
             ((System.ComponentModel.ISupportInitialize)(this.chartTrapezoid)).BeginInit();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartTriangle)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNormal)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -162,7 +179,7 @@ namespace ISModeling {
             this.chartRandom.Location = new System.Drawing.Point(314, 8);
             this.chartRandom.Margin = new System.Windows.Forms.Padding(5);
             this.chartRandom.Name = "chartRandom";
-            this.chartRandom.Size = new System.Drawing.Size(841, 590);
+            this.chartRandom.Size = new System.Drawing.Size(840, 548);
             this.chartRandom.TabIndex = 2;
             this.chartRandom.Text = "chart1";
             // 
@@ -343,7 +360,7 @@ namespace ISModeling {
             this.chart3.Location = new System.Drawing.Point(314, 8);
             this.chart3.Margin = new System.Windows.Forms.Padding(5);
             this.chart3.Name = "chart3";
-            this.chart3.Size = new System.Drawing.Size(841, 590);
+            this.chart3.Size = new System.Drawing.Size(841, 632);
             this.chart3.TabIndex = 20;
             this.chart3.Text = "chart3";
             // 
@@ -431,10 +448,10 @@ namespace ISModeling {
             this.chartLehmer.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chartLehmer.Legends.Add(legend3);
-            this.chartLehmer.Location = new System.Drawing.Point(314, 8);
+            this.chartLehmer.Location = new System.Drawing.Point(314, 5);
             this.chartLehmer.Margin = new System.Windows.Forms.Padding(5);
             this.chartLehmer.Name = "chartLehmer";
-            this.chartLehmer.Size = new System.Drawing.Size(841, 590);
+            this.chartLehmer.Size = new System.Drawing.Size(843, 554);
             this.chartLehmer.TabIndex = 19;
             this.chartLehmer.Text = "chartLehmer";
             // 
@@ -685,10 +702,10 @@ namespace ISModeling {
             this.chartTrapezoid.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
             this.chartTrapezoid.Legends.Add(legend4);
-            this.chartTrapezoid.Location = new System.Drawing.Point(314, 8);
+            this.chartTrapezoid.Location = new System.Drawing.Point(316, 8);
             this.chartTrapezoid.Margin = new System.Windows.Forms.Padding(5);
             this.chartTrapezoid.Name = "chartTrapezoid";
-            this.chartTrapezoid.Size = new System.Drawing.Size(841, 590);
+            this.chartTrapezoid.Size = new System.Drawing.Size(838, 548);
             this.chartTrapezoid.TabIndex = 3;
             this.chartTrapezoid.Text = "chartTrapezoid";
             // 
@@ -830,15 +847,28 @@ namespace ISModeling {
             this.chartTriangle.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
             this.chartTriangle.Legends.Add(legend5);
-            this.chartTriangle.Location = new System.Drawing.Point(314, 8);
+            this.chartTriangle.Location = new System.Drawing.Point(316, 8);
             this.chartTriangle.Margin = new System.Windows.Forms.Padding(5);
             this.chartTriangle.Name = "chartTriangle";
-            this.chartTriangle.Size = new System.Drawing.Size(841, 590);
+            this.chartTriangle.Size = new System.Drawing.Size(838, 548);
             this.chartTriangle.TabIndex = 4;
             this.chartTriangle.Text = "chart1";
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label24);
+            this.tabPage3.Controls.Add(this.textBox23);
+            this.tabPage3.Controls.Add(this.textBox22);
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.textBox19);
+            this.tabPage3.Controls.Add(this.textBox20);
+            this.tabPage3.Controls.Add(this.label20);
+            this.tabPage3.Controls.Add(this.label21);
+            this.tabPage3.Controls.Add(this.label22);
+            this.tabPage3.Controls.Add(this.button11);
+            this.tabPage3.Controls.Add(this.textBox21);
+            this.tabPage3.Controls.Add(this.button12);
+            this.tabPage3.Controls.Add(this.chartNormal);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -846,6 +876,138 @@ namespace ISModeling {
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Задание 3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(165, 172);
+            this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(59, 20);
+            this.label24.TabIndex = 22;
+            this.label24.Text = "Sigma";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(169, 195);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(140, 26);
+            this.textBox23.TabIndex = 21;
+            this.textBox23.Text = "10";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(15, 195);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(140, 26);
+            this.textBox22.TabIndex = 20;
+            this.textBox22.Text = "0";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(10, 172);
+            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(31, 20);
+            this.label23.TabIndex = 19;
+            this.label23.Text = "Mx";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(14, 39);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(295, 26);
+            this.textBox19.TabIndex = 13;
+            this.textBox19.Text = "100000";
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(14, 143);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(295, 26);
+            this.textBox20.TabIndex = 18;
+            this.textBox20.Text = "1";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(11, 120);
+            this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(206, 20);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Количество испытаний";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(11, 68);
+            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(216, 20);
+            this.label21.TabIndex = 17;
+            this.label21.Text = "Количество интервалов";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(10, 6);
+            this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(258, 20);
+            this.label22.TabIndex = 12;
+            this.label22.Text = "Количество случайных чисел";
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button11.Location = new System.Drawing.Point(226, 229);
+            this.button11.Margin = new System.Windows.Forms.Padding(5);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(83, 58);
+            this.button11.TabIndex = 16;
+            this.button11.Text = "Очистить";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(14, 91);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(295, 26);
+            this.textBox21.TabIndex = 15;
+            this.textBox21.Text = "100";
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(14, 229);
+            this.button12.Margin = new System.Windows.Forms.Padding(5);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(202, 58);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "Построить диаграмму";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // chartNormal
+            // 
+            this.chartNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartNormal.BorderlineColor = System.Drawing.SystemColors.Highlight;
+            this.chartNormal.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chartNormal.BorderlineWidth = 2;
+            chartArea6.Name = "ChartArea1";
+            this.chartNormal.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartNormal.Legends.Add(legend6);
+            this.chartNormal.Location = new System.Drawing.Point(327, 6);
+            this.chartNormal.Margin = new System.Windows.Forms.Padding(5);
+            this.chartNormal.Name = "chartNormal";
+            this.chartNormal.Size = new System.Drawing.Size(841, 597);
+            this.chartNormal.TabIndex = 3;
+            this.chartNormal.Text = "chart1";
             // 
             // Form1
             // 
@@ -882,6 +1044,9 @@ namespace ISModeling {
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartTriangle)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNormal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -954,6 +1119,19 @@ namespace ISModeling {
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartNormal;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Label label23;
     }
 }
 

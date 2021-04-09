@@ -19,6 +19,8 @@ namespace ISModeling {
         public static int countTrapezoidSeries = 0;
         public static int countTriangleSeries = 0;
 
+        public static int countNormalSeries = 0;
+
         // Встроенная функция
         private void button1_Click(object sender, EventArgs e)
         {
@@ -51,8 +53,6 @@ namespace ISModeling {
         // Метод Лемера
         private void button4_Click(object sender, EventArgs e)
         {
-            double x;
-
             int size = Convert.ToInt32(textBox7.Text);
             int countIntervals = Convert.ToInt32(textBox8.Text);
             int countSeries = Convert.ToInt32(textBox9.Text);
@@ -178,6 +178,37 @@ namespace ISModeling {
             }
         }
 
+        // Нормальное
+        private void button12_Click(object sender, EventArgs e)
+        {
+            int size = Convert.ToInt32(textBox19.Text);
+            int countIntervals = Convert.ToInt32(textBox21.Text);
+            int countSeries = Convert.ToInt32(textBox20.Text);
+            int Mx = Convert.ToInt32(textBox22.Text);
+            int sigma = Convert.ToInt32(textBox23.Text);
+
+            Series[] seriesMass = new Series[countSeries];
+            for (int s = 0; s < countSeries; s++) {
+
+                seriesMass[s] = new Series { Name = "Испытание " + (countNormalSeries + 1) };
+                countNormalSeries++;
+
+                double[] values = Algs.Normal(countIntervals, size, Mx, sigma);
+                int[] arr = new int[countIntervals];
+
+                foreach (var value in values)
+                    if (value > 0 && value < countIntervals)
+                        arr[(int)value]++;
+
+                // Добавление данных в серию
+                for (int i = 0; i < countIntervals; i++)
+                    seriesMass[s].Points.AddXY(i + 1, arr[i]);
+
+                // Добавление серии в гистограмму
+                chartNormal.Series.Add(seriesMass[s]);
+            }
+        }
+
         // Кнопка Очистить Встроенная функция
         private void button2_Click(object sender, EventArgs e)
         {
@@ -206,6 +237,12 @@ namespace ISModeling {
         {
             countTriangleSeries = 0;
             chartTriangle.Series.Clear();
+        }
+        // Кнопка Очистить Нормальное
+        private void button11_Click(object sender, EventArgs e)
+        {
+            countNormalSeries = 0;
+            chartNormal.Series.Clear();
         }
     }
     class Algs {
@@ -261,15 +298,34 @@ namespace ISModeling {
         {
             double[] mass = new double[s];
 
-            int b = (n / 2);
+            int b = n / 2;
 
             double[] x = Algs.CSRandom(s * 2);
 
             for (int i = 0; i < s; i++) {
-                x[i] *= b;
-                x[s + i] = x[s + i] * -b + b;
+                x[i] = x[i] * b;
+                x[s + i] = b - x[s + i] * b ;
 
                 mass[i] = x[i] + x[s + i];
+            }
+
+            return mass;
+        }
+
+        public static double[] Normal(int n, int s, int Mx, int sigma)
+        {
+            double[] mass = new double[s];
+            double m = n;
+
+            double[] x = Algs.CSRandom(s * n);
+
+            for (int i = 0; i < s; i++) {
+                double S = 0;
+
+                for (int j = n * i; j < n * (i + 1); j++)
+                    S += x[j];
+
+                mass[i] = Mx + (sigma * (Math.Sqrt(12 / m) * (S - (m / 2))));
             }
 
             return mass;
