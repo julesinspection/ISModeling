@@ -76,6 +76,7 @@ namespace ISModeling {
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -90,6 +91,7 @@ namespace ISModeling {
             this.label10 = new System.Windows.Forms.Label();
             this.chartTrapezoid = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -103,6 +105,7 @@ namespace ISModeling {
             this.label17 = new System.Windows.Forms.Label();
             this.chartTriangle = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.label24 = new System.Windows.Forms.Label();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -179,7 +182,7 @@ namespace ISModeling {
             this.chartRandom.Location = new System.Drawing.Point(314, 8);
             this.chartRandom.Margin = new System.Windows.Forms.Padding(5);
             this.chartRandom.Name = "chartRandom";
-            this.chartRandom.Size = new System.Drawing.Size(840, 548);
+            this.chartRandom.Size = new System.Drawing.Size(840, 576);
             this.chartRandom.TabIndex = 2;
             this.chartRandom.Text = "chart1";
             // 
@@ -360,7 +363,7 @@ namespace ISModeling {
             this.chart3.Location = new System.Drawing.Point(314, 8);
             this.chart3.Margin = new System.Windows.Forms.Padding(5);
             this.chart3.Name = "chart3";
-            this.chart3.Size = new System.Drawing.Size(841, 632);
+            this.chart3.Size = new System.Drawing.Size(840, 562);
             this.chart3.TabIndex = 20;
             this.chart3.Text = "chart3";
             // 
@@ -451,7 +454,7 @@ namespace ISModeling {
             this.chartLehmer.Location = new System.Drawing.Point(314, 5);
             this.chartLehmer.Margin = new System.Windows.Forms.Padding(5);
             this.chartLehmer.Name = "chartLehmer";
-            this.chartLehmer.Size = new System.Drawing.Size(843, 554);
+            this.chartLehmer.Size = new System.Drawing.Size(843, 582);
             this.chartLehmer.TabIndex = 19;
             this.chartLehmer.Text = "chartLehmer";
             // 
@@ -556,6 +559,7 @@ namespace ISModeling {
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.listBox1);
             this.tabPage7.Controls.Add(this.textBox18);
             this.tabPage7.Controls.Add(this.label19);
             this.tabPage7.Controls.Add(this.label13);
@@ -576,6 +580,19 @@ namespace ISModeling {
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Трапецеидальное";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Items.AddRange(new object[] {
+            "Встроенная функция",
+            "Простых конгруэнций",
+            "Лемера"});
+            this.listBox1.Location = new System.Drawing.Point(12, 271);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(294, 64);
+            this.listBox1.TabIndex = 19;
             // 
             // textBox18
             // 
@@ -652,7 +669,7 @@ namespace ISModeling {
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(223, 273);
+            this.button7.Location = new System.Drawing.Point(223, 343);
             this.button7.Margin = new System.Windows.Forms.Padding(5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(83, 58);
@@ -663,7 +680,7 @@ namespace ISModeling {
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(11, 273);
+            this.button8.Location = new System.Drawing.Point(11, 343);
             this.button8.Margin = new System.Windows.Forms.Padding(5);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(202, 58);
@@ -711,6 +728,7 @@ namespace ISModeling {
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.listBox2);
             this.tabPage8.Controls.Add(this.textBox14);
             this.tabPage8.Controls.Add(this.label18);
             this.tabPage8.Controls.Add(this.label14);
@@ -730,6 +748,19 @@ namespace ISModeling {
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "Треугольное";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Items.AddRange(new object[] {
+            "Встроенная функция",
+            "Простых конгруэнций",
+            "Лемера"});
+            this.listBox2.Location = new System.Drawing.Point(11, 219);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(294, 64);
+            this.listBox2.TabIndex = 29;
             // 
             // textBox14
             // 
@@ -797,7 +828,7 @@ namespace ISModeling {
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(223, 221);
+            this.button9.Location = new System.Drawing.Point(223, 291);
             this.button9.Margin = new System.Windows.Forms.Padding(5);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(83, 58);
@@ -808,7 +839,7 @@ namespace ISModeling {
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(11, 221);
+            this.button10.Location = new System.Drawing.Point(11, 291);
             this.button10.Margin = new System.Windows.Forms.Padding(5);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(202, 58);
@@ -850,12 +881,13 @@ namespace ISModeling {
             this.chartTriangle.Location = new System.Drawing.Point(316, 8);
             this.chartTriangle.Margin = new System.Windows.Forms.Padding(5);
             this.chartTriangle.Name = "chartTriangle";
-            this.chartTriangle.Size = new System.Drawing.Size(838, 548);
+            this.chartTriangle.Size = new System.Drawing.Size(838, 562);
             this.chartTriangle.TabIndex = 4;
             this.chartTriangle.Text = "chart1";
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.listBox3);
             this.tabPage3.Controls.Add(this.label24);
             this.tabPage3.Controls.Add(this.textBox23);
             this.tabPage3.Controls.Add(this.textBox22);
@@ -874,8 +906,21 @@ namespace ISModeling {
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1176, 603);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Задание 3";
+            this.tabPage3.Text = "Нормальное";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 20;
+            this.listBox3.Items.AddRange(new object[] {
+            "Встроенная функция",
+            "Простых конгруэнций",
+            "Лемера"});
+            this.listBox3.Location = new System.Drawing.Point(14, 227);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(294, 64);
+            this.listBox3.TabIndex = 23;
             // 
             // label24
             // 
@@ -901,7 +946,7 @@ namespace ISModeling {
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(140, 26);
             this.textBox22.TabIndex = 20;
-            this.textBox22.Text = "0";
+            this.textBox22.Text = "50";
             // 
             // label23
             // 
@@ -962,7 +1007,7 @@ namespace ISModeling {
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button11.Location = new System.Drawing.Point(226, 229);
+            this.button11.Location = new System.Drawing.Point(226, 299);
             this.button11.Margin = new System.Windows.Forms.Padding(5);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(83, 58);
@@ -981,7 +1026,7 @@ namespace ISModeling {
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(14, 229);
+            this.button12.Location = new System.Drawing.Point(14, 299);
             this.button12.Margin = new System.Windows.Forms.Padding(5);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(202, 58);
@@ -1005,7 +1050,7 @@ namespace ISModeling {
             this.chartNormal.Location = new System.Drawing.Point(327, 6);
             this.chartNormal.Margin = new System.Windows.Forms.Padding(5);
             this.chartNormal.Name = "chartNormal";
-            this.chartNormal.Size = new System.Drawing.Size(841, 597);
+            this.chartNormal.Size = new System.Drawing.Size(841, 587);
             this.chartNormal.TabIndex = 3;
             this.chartNormal.Text = "chart1";
             // 
@@ -1132,6 +1177,9 @@ namespace ISModeling {
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
     }
 }
 

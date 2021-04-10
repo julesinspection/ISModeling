@@ -49,6 +49,34 @@ namespace ISModeling {
             }
         }
 
+        // Метод простых 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int size = Convert.ToInt32(textBox4.Text);
+            int countIntervals = Convert.ToInt32(textBox5.Text);
+            int countSeries = Convert.ToInt32(textBox6.Text);
+
+            Series[] seriesMass = new Series[countSeries];
+
+            for (int s = 0; s < countSeries; s++) {
+
+                seriesMass[s] = new Series { Name = "Испытание " + (countCSRandomSeries + 1) };
+                countCSRandomSeries++;
+
+                double[] values = Algs.SCongruence(countIntervals, size);
+                int[] arr = new int[countIntervals];
+
+                foreach (var value in values)
+                    arr[(int)(value * countIntervals)]++;
+
+                // Добавление данных в серию
+                for (int i = 0; i < countIntervals; i++)
+                    seriesMass[s].Points.AddXY(i + 1, arr[i]);
+
+                // Добавление серии в гистограмму
+                chart3.Series.Add(seriesMass[s]);
+            }
+        }
 
         // Метод Лемера
         private void button4_Click(object sender, EventArgs e)
@@ -77,45 +105,9 @@ namespace ISModeling {
                 // Добавление серии в гистограмму
                 chartLehmer.Series.Add(seriesMass[s]);
             }
-
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            double x;
-
-            int size = Convert.ToInt32(textBox4.Text);
-            int countIntervals = Convert.ToInt32(textBox4.Text);
-            double[] arr = new double[countIntervals];
-
-            int countSeries = Convert.ToInt32(textBox6.Text);
-            Series[] seriesMass = new Series[countSeries];
-
-            for (int s = 0; s < countSeries; s++) {
-
-                for (int i = 0; i < countIntervals; i++) {
-                    arr[i] = 0;
-                }
-
-                seriesMass[s] = new Series { Name = "Испытание " + (countCSRandomSeries + 1) };
-                countCSRandomSeries++;
-
-                int m = 100, a = 8, c = 65;
-                x = 2;
-                for (int i = 0; i < size; i++) {
-                    x = ((a * x) + c) % m / (double)m * countIntervals;
-                    arr[(int)x]++;
-                }
-
-
-                // Добавление данных в серию
-                for (int i = 0; i < countIntervals; i++) {
-                    seriesMass[s].Points.AddXY(i + 1, arr[i]);
-                }
-                // Добавление серии в гистограмму
-                chart3.Series.Add(seriesMass[s]);
-            }
-        }
+        
 
         // Трапеция
         private void button8_Click(object sender, EventArgs e)
@@ -133,7 +125,7 @@ namespace ISModeling {
                 seriesMass[s] = new Series { Name = "Испытание " + (countTrapezoidSeries + 1) };
                 countTrapezoidSeries++;
 
-                double[] values = Algs.Trapezoid(countIntervals, size, sizeV);
+                double[] values = Algs.Trapezoid(countIntervals, size, sizeV, listBox1.SelectedIndex);
                 int[] arr = new int[countIntervals];
 
                 foreach (var value in values)
@@ -163,7 +155,7 @@ namespace ISModeling {
                 seriesMass[s] = new Series { Name = "Испытание " + (countTriangleSeries + 1) };
                 countTriangleSeries++;
 
-                double[] values = Algs.Triangle(countIntervals, size);
+                double[] values = Algs.Triangle(countIntervals, size, listBox2.SelectedIndex);
                 int[] arr = new int[countIntervals];
 
                 foreach (var value in values)
@@ -193,7 +185,7 @@ namespace ISModeling {
                 seriesMass[s] = new Series { Name = "Испытание " + (countNormalSeries + 1) };
                 countNormalSeries++;
 
-                double[] values = Algs.Normal(countIntervals, size, Mx, sigma);
+                double[] values = Algs.Normal(countIntervals, size, Mx, sigma, listBox3.SelectedIndex);
                 int[] arr = new int[countIntervals];
 
                 foreach (var value in values)
@@ -245,6 +237,7 @@ namespace ISModeling {
             chartNormal.Series.Clear();
         }
     }
+
     class Algs {
         public static double[] CSRandom(int s)
         {
@@ -252,6 +245,23 @@ namespace ISModeling {
             Random rnd = new Random();
             for (int i = 0; i < s; i++)
                 mass[i] = rnd.NextDouble();
+            return mass;
+        }
+
+        private static double X = 1;
+        public static double[] SCongruence(int n, int s)
+        {
+            const int m = 67;
+            const int a = 45;
+            const int c = 21;
+
+            double[] mass = new double[s];
+
+            for (int i = 0; i < s; i++) {
+                X = (a * X + c) % m / m * n;
+                mass[i] = X / n;
+            }
+
             return mass;
         }
 
@@ -275,14 +285,27 @@ namespace ISModeling {
             return mass;
         }
 
-        public static double[] Trapezoid(int n, int s, int v)
+        public static double[] Trapezoid(int n, int s, int v, int AlgIndex)
         {
             double[] mass = new double[s];
 
             int b = (n / 2) - (v / 2);
             int c = (n / 2) + (v / 2);
 
-            double[] x = Algs.CSRandom(s * 2);
+            double[] x = new double[s * 2];
+            
+            switch (AlgIndex) {
+                case (-1):
+                case (0):
+                    x = Algs.CSRandom(s * 2);
+                    break;
+                case (1):
+                    x = Algs.SCongruence(n, s * 2);
+                    break;
+                case (2):
+                    x = Algs.Lehmer(s * 2);
+                    break;
+            }
 
             for (int i = 0; i < s; i++) {
                 x[i] *= b;
@@ -294,13 +317,26 @@ namespace ISModeling {
             return mass;
         }
 
-        public static double[] Triangle(int n, int s)
+        public static double[] Triangle(int n, int s, int AlgIndex)
         {
             double[] mass = new double[s];
 
             int b = n / 2;
 
-            double[] x = Algs.CSRandom(s * 2);
+            double[] x = new double[s * 2];
+
+            switch (AlgIndex) {
+                case (-1):
+                case (0):
+                    x = Algs.CSRandom(s * 2);
+                    break;
+                case (1):
+                    x = Algs.SCongruence(n, s * 2);
+                    break;
+                case (2):
+                    x = Algs.Lehmer(s * 2);
+                    break;
+            }
 
             for (int i = 0; i < s; i++) {
                 x[i] = x[i] * b;
@@ -312,12 +348,25 @@ namespace ISModeling {
             return mass;
         }
 
-        public static double[] Normal(int n, int s, int Mx, int sigma)
+        public static double[] Normal(int n, int s, int Mx, int sigma, int AlgIndex)
         {
             double[] mass = new double[s];
             double m = n;
 
-            double[] x = Algs.CSRandom(s * n);
+            double[] x = new double[s * n];
+
+            switch (AlgIndex) {
+                case (-1):
+                case (0):
+                    x = Algs.CSRandom(s * n);
+                    break;
+                case (1):
+                    x = Algs.SCongruence(n, s * n);
+                    break;
+                case (2):
+                    x = Algs.Lehmer(s * n);
+                    break;
+            }
 
             for (int i = 0; i < s; i++) {
                 double S = 0;
