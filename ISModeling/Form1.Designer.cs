@@ -26,18 +26,22 @@ namespace ISModeling {
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,6 +123,32 @@ namespace ISModeling {
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
             this.chartNormal = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.chartExp = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.button16 = new System.Windows.Forms.Button();
+            this.chartErl = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRandom)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -137,6 +167,10 @@ namespace ISModeling {
             ((System.ComponentModel.ISupportInitialize)(this.chartTriangle)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartNormal)).BeginInit();
+            this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartExp)).BeginInit();
+            this.tabPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartErl)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -175,14 +209,15 @@ namespace ISModeling {
             this.chartRandom.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartRandom.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartRandom.BorderlineWidth = 2;
-            chartArea1.Name = "ChartArea1";
-            this.chartRandom.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartRandom.Legends.Add(legend1);
+            chartArea9.AxisX.Interval = 8D;
+            chartArea9.Name = "ChartArea1";
+            this.chartRandom.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chartRandom.Legends.Add(legend9);
             this.chartRandom.Location = new System.Drawing.Point(314, 8);
             this.chartRandom.Margin = new System.Windows.Forms.Padding(5);
             this.chartRandom.Name = "chartRandom";
-            this.chartRandom.Size = new System.Drawing.Size(840, 576);
+            this.chartRandom.Size = new System.Drawing.Size(840, 548);
             this.chartRandom.TabIndex = 2;
             this.chartRandom.Text = "chart1";
             // 
@@ -227,6 +262,8 @@ namespace ISModeling {
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
@@ -356,14 +393,14 @@ namespace ISModeling {
             this.chart3.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chart3.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chart3.BorderlineWidth = 2;
-            chartArea2.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart3.Legends.Add(legend2);
+            chartArea11.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chart3.Legends.Add(legend11);
             this.chart3.Location = new System.Drawing.Point(314, 8);
             this.chart3.Margin = new System.Windows.Forms.Padding(5);
             this.chart3.Name = "chart3";
-            this.chart3.Size = new System.Drawing.Size(840, 562);
+            this.chart3.Size = new System.Drawing.Size(840, 548);
             this.chart3.TabIndex = 20;
             this.chart3.Text = "chart3";
             // 
@@ -447,14 +484,14 @@ namespace ISModeling {
             this.chartLehmer.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartLehmer.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartLehmer.BorderlineWidth = 2;
-            chartArea3.Name = "ChartArea1";
-            this.chartLehmer.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartLehmer.Legends.Add(legend3);
+            chartArea12.Name = "ChartArea1";
+            this.chartLehmer.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chartLehmer.Legends.Add(legend12);
             this.chartLehmer.Location = new System.Drawing.Point(314, 5);
             this.chartLehmer.Margin = new System.Windows.Forms.Padding(5);
             this.chartLehmer.Name = "chartLehmer";
-            this.chartLehmer.Size = new System.Drawing.Size(843, 582);
+            this.chartLehmer.Size = new System.Drawing.Size(843, 554);
             this.chartLehmer.TabIndex = 19;
             this.chartLehmer.Text = "chartLehmer";
             // 
@@ -715,10 +752,10 @@ namespace ISModeling {
             this.chartTrapezoid.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartTrapezoid.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartTrapezoid.BorderlineWidth = 2;
-            chartArea4.Name = "ChartArea1";
-            this.chartTrapezoid.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartTrapezoid.Legends.Add(legend4);
+            chartArea13.Name = "ChartArea1";
+            this.chartTrapezoid.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.chartTrapezoid.Legends.Add(legend13);
             this.chartTrapezoid.Location = new System.Drawing.Point(316, 8);
             this.chartTrapezoid.Margin = new System.Windows.Forms.Padding(5);
             this.chartTrapezoid.Name = "chartTrapezoid";
@@ -874,14 +911,14 @@ namespace ISModeling {
             this.chartTriangle.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartTriangle.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartTriangle.BorderlineWidth = 2;
-            chartArea5.Name = "ChartArea1";
-            this.chartTriangle.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartTriangle.Legends.Add(legend5);
+            chartArea14.Name = "ChartArea1";
+            this.chartTriangle.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.chartTriangle.Legends.Add(legend14);
             this.chartTriangle.Location = new System.Drawing.Point(316, 8);
             this.chartTriangle.Margin = new System.Windows.Forms.Padding(5);
             this.chartTriangle.Name = "chartTriangle";
-            this.chartTriangle.Size = new System.Drawing.Size(838, 562);
+            this.chartTriangle.Size = new System.Drawing.Size(838, 548);
             this.chartTriangle.TabIndex = 4;
             this.chartTriangle.Text = "chart1";
             // 
@@ -1043,16 +1080,312 @@ namespace ISModeling {
             this.chartNormal.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartNormal.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartNormal.BorderlineWidth = 2;
-            chartArea6.Name = "ChartArea1";
-            this.chartNormal.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartNormal.Legends.Add(legend6);
+            chartArea15.Name = "ChartArea1";
+            this.chartNormal.ChartAreas.Add(chartArea15);
+            legend15.Name = "Legend1";
+            this.chartNormal.Legends.Add(legend15);
             this.chartNormal.Location = new System.Drawing.Point(327, 6);
             this.chartNormal.Margin = new System.Windows.Forms.Padding(5);
             this.chartNormal.Name = "chartNormal";
             this.chartNormal.Size = new System.Drawing.Size(841, 587);
             this.chartNormal.TabIndex = 3;
             this.chartNormal.Text = "chart1";
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.listBox4);
+            this.tabPage9.Controls.Add(this.textBox25);
+            this.tabPage9.Controls.Add(this.label26);
+            this.tabPage9.Controls.Add(this.textBox26);
+            this.tabPage9.Controls.Add(this.textBox27);
+            this.tabPage9.Controls.Add(this.label27);
+            this.tabPage9.Controls.Add(this.label28);
+            this.tabPage9.Controls.Add(this.label29);
+            this.tabPage9.Controls.Add(this.button13);
+            this.tabPage9.Controls.Add(this.textBox28);
+            this.tabPage9.Controls.Add(this.button14);
+            this.tabPage9.Controls.Add(this.chartExp);
+            this.tabPage9.Location = new System.Drawing.Point(4, 29);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(1176, 603);
+            this.tabPage9.TabIndex = 3;
+            this.tabPage9.Text = "Экспоненциальное";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 20;
+            this.listBox4.Items.AddRange(new object[] {
+            "Встроенная функция",
+            "Простых конгруэнций",
+            "Лемера"});
+            this.listBox4.Location = new System.Drawing.Point(13, 229);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(294, 64);
+            this.listBox4.TabIndex = 37;
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(14, 197);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(293, 26);
+            this.textBox25.TabIndex = 34;
+            this.textBox25.Text = "1";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(9, 174);
+            this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(19, 20);
+            this.label26.TabIndex = 33;
+            this.label26.Text = "λ";
+            // 
+            // textBox26
+            // 
+            this.textBox26.Location = new System.Drawing.Point(13, 41);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(295, 26);
+            this.textBox26.TabIndex = 27;
+            this.textBox26.Text = "100000";
+            // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(13, 145);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(295, 26);
+            this.textBox27.TabIndex = 32;
+            this.textBox27.Text = "1";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(10, 122);
+            this.label27.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(206, 20);
+            this.label27.TabIndex = 28;
+            this.label27.Text = "Количество испытаний";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(10, 70);
+            this.label28.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(216, 20);
+            this.label28.TabIndex = 31;
+            this.label28.Text = "Количество интервалов";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(9, 8);
+            this.label29.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(258, 20);
+            this.label29.TabIndex = 26;
+            this.label29.Text = "Количество случайных чисел";
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button13.Location = new System.Drawing.Point(225, 301);
+            this.button13.Margin = new System.Windows.Forms.Padding(5);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(83, 58);
+            this.button13.TabIndex = 30;
+            this.button13.Text = "Очистить";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(13, 93);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(295, 26);
+            this.textBox28.TabIndex = 29;
+            this.textBox28.Text = "20";
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(13, 301);
+            this.button14.Margin = new System.Windows.Forms.Padding(5);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(202, 58);
+            this.button14.TabIndex = 25;
+            this.button14.Text = "Построить диаграмму";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // chartExp
+            // 
+            this.chartExp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartExp.BorderlineColor = System.Drawing.SystemColors.Highlight;
+            this.chartExp.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chartExp.BorderlineWidth = 2;
+            chartArea16.Name = "ChartArea1";
+            this.chartExp.ChartAreas.Add(chartArea16);
+            legend16.Name = "Legend1";
+            this.chartExp.Legends.Add(legend16);
+            this.chartExp.Location = new System.Drawing.Point(326, 8);
+            this.chartExp.Margin = new System.Windows.Forms.Padding(5);
+            this.chartExp.Name = "chartExp";
+            this.chartExp.Size = new System.Drawing.Size(841, 587);
+            this.chartExp.TabIndex = 24;
+            this.chartExp.Text = "chart1";
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.listBox5);
+            this.tabPage10.Controls.Add(this.textBox24);
+            this.tabPage10.Controls.Add(this.label25);
+            this.tabPage10.Controls.Add(this.textBox29);
+            this.tabPage10.Controls.Add(this.textBox30);
+            this.tabPage10.Controls.Add(this.label30);
+            this.tabPage10.Controls.Add(this.label31);
+            this.tabPage10.Controls.Add(this.label32);
+            this.tabPage10.Controls.Add(this.button15);
+            this.tabPage10.Controls.Add(this.textBox31);
+            this.tabPage10.Controls.Add(this.button16);
+            this.tabPage10.Controls.Add(this.chartErl);
+            this.tabPage10.Location = new System.Drawing.Point(4, 29);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(1176, 603);
+            this.tabPage10.TabIndex = 4;
+            this.tabPage10.Text = "Эрланга";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // listBox5
+            // 
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.ItemHeight = 20;
+            this.listBox5.Items.AddRange(new object[] {
+            "Встроенная функция",
+            "Простых конгруэнций",
+            "Лемера"});
+            this.listBox5.Location = new System.Drawing.Point(13, 229);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(294, 64);
+            this.listBox5.TabIndex = 49;
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(14, 197);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(293, 26);
+            this.textBox24.TabIndex = 48;
+            this.textBox24.Text = "1";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(9, 174);
+            this.label25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(18, 20);
+            this.label25.TabIndex = 47;
+            this.label25.Text = "k";
+            // 
+            // textBox29
+            // 
+            this.textBox29.Location = new System.Drawing.Point(13, 41);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(295, 26);
+            this.textBox29.TabIndex = 41;
+            this.textBox29.Text = "100000";
+            // 
+            // textBox30
+            // 
+            this.textBox30.Location = new System.Drawing.Point(13, 145);
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new System.Drawing.Size(295, 26);
+            this.textBox30.TabIndex = 46;
+            this.textBox30.Text = "1";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(10, 122);
+            this.label30.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(206, 20);
+            this.label30.TabIndex = 42;
+            this.label30.Text = "Количество испытаний";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(10, 70);
+            this.label31.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(216, 20);
+            this.label31.TabIndex = 45;
+            this.label31.Text = "Количество интервалов";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(9, 8);
+            this.label32.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(258, 20);
+            this.label32.TabIndex = 40;
+            this.label32.Text = "Количество случайных чисел";
+            // 
+            // button15
+            // 
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button15.Location = new System.Drawing.Point(225, 301);
+            this.button15.Margin = new System.Windows.Forms.Padding(5);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(83, 58);
+            this.button15.TabIndex = 44;
+            this.button15.Text = "Очистить";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // textBox31
+            // 
+            this.textBox31.Location = new System.Drawing.Point(13, 93);
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(295, 26);
+            this.textBox31.TabIndex = 43;
+            this.textBox31.Text = "20";
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(13, 301);
+            this.button16.Margin = new System.Windows.Forms.Padding(5);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(202, 58);
+            this.button16.TabIndex = 39;
+            this.button16.Text = "Построить диаграмму";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // chartErl
+            // 
+            this.chartErl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartErl.BorderlineColor = System.Drawing.SystemColors.Highlight;
+            this.chartErl.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chartErl.BorderlineWidth = 2;
+            chartArea10.Name = "ChartArea1";
+            this.chartErl.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chartErl.Legends.Add(legend10);
+            this.chartErl.Location = new System.Drawing.Point(326, 8);
+            this.chartErl.Margin = new System.Windows.Forms.Padding(5);
+            this.chartErl.Name = "chartErl";
+            this.chartErl.Size = new System.Drawing.Size(841, 587);
+            this.chartErl.TabIndex = 38;
+            this.chartErl.Text = "chart1";
             // 
             // Form1
             // 
@@ -1092,6 +1425,12 @@ namespace ISModeling {
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartNormal)).EndInit();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartExp)).EndInit();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartErl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1180,6 +1519,32 @@ namespace ISModeling {
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartExp;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox textBox30;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.TextBox textBox31;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartErl;
     }
 }
 
