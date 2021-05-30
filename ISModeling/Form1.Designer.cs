@@ -26,22 +26,22 @@ namespace ISModeling {
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -149,6 +149,8 @@ namespace ISModeling {
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.button16 = new System.Windows.Forms.Button();
             this.chartErl = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRandom)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -209,15 +211,15 @@ namespace ISModeling {
             this.chartRandom.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartRandom.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartRandom.BorderlineWidth = 2;
-            chartArea9.AxisX.Interval = 8D;
-            chartArea9.Name = "ChartArea1";
-            this.chartRandom.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chartRandom.Legends.Add(legend9);
+            chartArea1.AxisX.Interval = 8D;
+            chartArea1.Name = "ChartArea1";
+            this.chartRandom.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRandom.Legends.Add(legend1);
             this.chartRandom.Location = new System.Drawing.Point(314, 8);
             this.chartRandom.Margin = new System.Windows.Forms.Padding(5);
             this.chartRandom.Name = "chartRandom";
-            this.chartRandom.Size = new System.Drawing.Size(840, 548);
+            this.chartRandom.Size = new System.Drawing.Size(840, 555);
             this.chartRandom.TabIndex = 2;
             this.chartRandom.Text = "chart1";
             // 
@@ -393,14 +395,14 @@ namespace ISModeling {
             this.chart3.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chart3.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chart3.BorderlineWidth = 2;
-            chartArea11.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chart3.Legends.Add(legend11);
+            chartArea2.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart3.Legends.Add(legend2);
             this.chart3.Location = new System.Drawing.Point(314, 8);
             this.chart3.Margin = new System.Windows.Forms.Padding(5);
             this.chart3.Name = "chart3";
-            this.chart3.Size = new System.Drawing.Size(840, 548);
+            this.chart3.Size = new System.Drawing.Size(840, 555);
             this.chart3.TabIndex = 20;
             this.chart3.Text = "chart3";
             // 
@@ -484,14 +486,14 @@ namespace ISModeling {
             this.chartLehmer.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartLehmer.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartLehmer.BorderlineWidth = 2;
-            chartArea12.Name = "ChartArea1";
-            this.chartLehmer.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chartLehmer.Legends.Add(legend12);
+            chartArea3.Name = "ChartArea1";
+            this.chartLehmer.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartLehmer.Legends.Add(legend3);
             this.chartLehmer.Location = new System.Drawing.Point(314, 5);
             this.chartLehmer.Margin = new System.Windows.Forms.Padding(5);
             this.chartLehmer.Name = "chartLehmer";
-            this.chartLehmer.Size = new System.Drawing.Size(843, 554);
+            this.chartLehmer.Size = new System.Drawing.Size(843, 561);
             this.chartLehmer.TabIndex = 19;
             this.chartLehmer.Text = "chartLehmer";
             // 
@@ -752,14 +754,14 @@ namespace ISModeling {
             this.chartTrapezoid.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartTrapezoid.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartTrapezoid.BorderlineWidth = 2;
-            chartArea13.Name = "ChartArea1";
-            this.chartTrapezoid.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.chartTrapezoid.Legends.Add(legend13);
+            chartArea4.Name = "ChartArea1";
+            this.chartTrapezoid.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartTrapezoid.Legends.Add(legend4);
             this.chartTrapezoid.Location = new System.Drawing.Point(316, 8);
             this.chartTrapezoid.Margin = new System.Windows.Forms.Padding(5);
             this.chartTrapezoid.Name = "chartTrapezoid";
-            this.chartTrapezoid.Size = new System.Drawing.Size(838, 548);
+            this.chartTrapezoid.Size = new System.Drawing.Size(838, 555);
             this.chartTrapezoid.TabIndex = 3;
             this.chartTrapezoid.Text = "chartTrapezoid";
             // 
@@ -911,14 +913,14 @@ namespace ISModeling {
             this.chartTriangle.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartTriangle.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartTriangle.BorderlineWidth = 2;
-            chartArea14.Name = "ChartArea1";
-            this.chartTriangle.ChartAreas.Add(chartArea14);
-            legend14.Name = "Legend1";
-            this.chartTriangle.Legends.Add(legend14);
+            chartArea5.Name = "ChartArea1";
+            this.chartTriangle.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartTriangle.Legends.Add(legend5);
             this.chartTriangle.Location = new System.Drawing.Point(316, 8);
             this.chartTriangle.Margin = new System.Windows.Forms.Padding(5);
             this.chartTriangle.Name = "chartTriangle";
-            this.chartTriangle.Size = new System.Drawing.Size(838, 548);
+            this.chartTriangle.Size = new System.Drawing.Size(838, 555);
             this.chartTriangle.TabIndex = 4;
             this.chartTriangle.Text = "chart1";
             // 
@@ -1080,10 +1082,10 @@ namespace ISModeling {
             this.chartNormal.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartNormal.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartNormal.BorderlineWidth = 2;
-            chartArea15.Name = "ChartArea1";
-            this.chartNormal.ChartAreas.Add(chartArea15);
-            legend15.Name = "Legend1";
-            this.chartNormal.Legends.Add(legend15);
+            chartArea6.Name = "ChartArea1";
+            this.chartNormal.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartNormal.Legends.Add(legend6);
             this.chartNormal.Location = new System.Drawing.Point(327, 6);
             this.chartNormal.Margin = new System.Windows.Forms.Padding(5);
             this.chartNormal.Name = "chartNormal";
@@ -1228,10 +1230,10 @@ namespace ISModeling {
             this.chartExp.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartExp.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartExp.BorderlineWidth = 2;
-            chartArea16.Name = "ChartArea1";
-            this.chartExp.ChartAreas.Add(chartArea16);
-            legend16.Name = "Legend1";
-            this.chartExp.Legends.Add(legend16);
+            chartArea7.Name = "ChartArea1";
+            this.chartExp.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chartExp.Legends.Add(legend7);
             this.chartExp.Location = new System.Drawing.Point(326, 8);
             this.chartExp.Margin = new System.Windows.Forms.Padding(5);
             this.chartExp.Name = "chartExp";
@@ -1241,6 +1243,8 @@ namespace ISModeling {
             // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.textBox32);
+            this.tabPage10.Controls.Add(this.label33);
             this.tabPage10.Controls.Add(this.listBox5);
             this.tabPage10.Controls.Add(this.textBox24);
             this.tabPage10.Controls.Add(this.label25);
@@ -1277,7 +1281,7 @@ namespace ISModeling {
             // 
             this.textBox24.Location = new System.Drawing.Point(14, 197);
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(293, 26);
+            this.textBox24.Size = new System.Drawing.Size(168, 26);
             this.textBox24.TabIndex = 48;
             this.textBox24.Text = "1";
             // 
@@ -1376,16 +1380,34 @@ namespace ISModeling {
             this.chartErl.BorderlineColor = System.Drawing.SystemColors.Highlight;
             this.chartErl.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartErl.BorderlineWidth = 2;
-            chartArea10.Name = "ChartArea1";
-            this.chartErl.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chartErl.Legends.Add(legend10);
+            chartArea8.Name = "ChartArea1";
+            this.chartErl.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chartErl.Legends.Add(legend8);
             this.chartErl.Location = new System.Drawing.Point(326, 8);
             this.chartErl.Margin = new System.Windows.Forms.Padding(5);
             this.chartErl.Name = "chartErl";
             this.chartErl.Size = new System.Drawing.Size(841, 587);
             this.chartErl.TabIndex = 38;
             this.chartErl.Text = "chart1";
+            // 
+            // textBox32
+            // 
+            this.textBox32.Location = new System.Drawing.Point(188, 197);
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(119, 26);
+            this.textBox32.TabIndex = 51;
+            this.textBox32.Text = "1";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(183, 174);
+            this.label33.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(19, 20);
+            this.label33.TabIndex = 50;
+            this.label33.Text = "λ";
             // 
             // Form1
             // 
@@ -1545,6 +1567,8 @@ namespace ISModeling {
         private System.Windows.Forms.TextBox textBox31;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartErl;
+        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.Label label33;
     }
 }
 

@@ -287,6 +287,7 @@ namespace ISModeling {
             int countIntervals = Convert.ToInt32(textBox31.Text);
             int countSeries = Convert.ToInt32(textBox30.Text);
             int k = Convert.ToInt32(textBox24.Text);
+            double L = Convert.ToInt32(textBox32.Text);
 
             Series[] seriesMass = new Series[countSeries];
             for (int s = 0; s < countSeries; s++) {
@@ -294,7 +295,7 @@ namespace ISModeling {
                 seriesMass[s] = new Series { Name = "Испытание " + (countErlSeries + 1) };
                 countErlSeries++;
 
-                double[] values = Algs.Erl(countIntervals, size, k, listBox5.SelectedIndex);
+                double[] values = Algs.Erl(countIntervals, size, k, L, listBox5.SelectedIndex);
                 int[] arr = new int[countIntervals];
 
                 foreach (var value in values)
@@ -477,13 +478,13 @@ namespace ISModeling {
                 return mass;
             }
 
-            public static double[] Erl(int n, int s, int k, int AlgIndex)
+            public static double[] Erl(int n, int s, int k, double L, int AlgIndex)
             {
                 double[] mass = new double[s];
 
                 double[] x = new double[s * k];
 
-                x = Algs.Exp(n, s * k, 1, AlgIndex);
+                x = Algs.Exp(n, s * k, L, AlgIndex);
                 double S = 0;
                 for (int i = 0; i < s; i++) {
                     S = 0;
