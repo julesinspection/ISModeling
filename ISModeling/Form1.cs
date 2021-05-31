@@ -24,8 +24,10 @@ namespace ISModeling {
         public static int countNormalSeries = 0;
 
         public static int countExpSeries = 0;
+        public static int countGExpSeries = 0;
 
         public static int countErlSeries = 0;
+
 
         // Встроенная функция
         private void button1_Click(object sender, EventArgs e)
@@ -205,6 +207,33 @@ namespace ISModeling {
                 chartNormal.Series.Add(seriesMass[s]);
             }
         }
+        private void button22_Click(object sender, EventArgs e)
+        {
+            int size = Convert.ToInt32(textBox35.Text);
+            int countIntervals = Convert.ToInt32(textBox38.Text);
+            int countSeries = Convert.ToInt32(textBox37.Text);
+
+            Series[] seriesMass = new Series[countSeries];
+            for (int s = 0; s < countSeries; s++) {
+
+                seriesMass[s] = new Series { Name = "Испытание " + (countNormalSeries + 1) };
+                countNormalSeries++;
+
+                double[] values = Algs.Muller(countIntervals, size, listBox8.SelectedIndex);
+                int[] arr = new int[countIntervals];
+
+                foreach (var value in values)
+                    if (value > 0 && value < countIntervals)
+                        arr[(int)value]++;
+
+                // Добавление данных в серию
+                for (int i = 0; i < countIntervals; i++)
+                    seriesMass[s].Points.AddXY(i + 1, arr[i]);
+
+                // Добавление серии в гистограмму
+                chartM.Series.Add(seriesMass[s]);
+            }
+        }
 
         // Кнопка Очистить Встроенная функция
         private void button2_Click(object sender, EventArgs e)
@@ -247,32 +276,54 @@ namespace ISModeling {
             countExpSeries = 0;
             chartExp.Series.Clear();
         }
+        // Кнопка очистить Гиперэксп
+        private void button17_Click(object sender, EventArgs e)
+        {
+            countGExpSeries = 0;
+        }
         // Экспоненциальное
         private void button14_Click(object sender, EventArgs e)
         {
+            chartGExp.Series.Clear();
             int size = Convert.ToInt32(textBox26.Text);
             int countIntervals = Convert.ToInt32(textBox28.Text);
-            int countSeries = Convert.ToInt32(textBox27.Text);
-            double L = Convert.ToDouble(textBox25.Text);
+            int L = Convert.ToInt32(textBox25.Text);
+            Series s = new Series { Name = "Испытание" };
+            countGExpSeries++;
 
-            Series[] seriesMass = new Series[countSeries];
-            for (int s = 0; s < countSeries; s++) {
+            double[] arr = Algs.Exp(countIntervals, size, L, listBox4.SelectedIndex);
 
-                seriesMass[s] = new Series { Name = "Испытание " + (countExpSeries + 1) };
-                countExpSeries++;
 
-                double[] values = Algs.Exp(countIntervals, size, L, listBox4.SelectedIndex);
-                int[] arr = new int[countIntervals];
+            // Добавление данных в серию
+            for (int i = 0; i < size; i++)
+                s.Points.AddXY(arr[i], 1);
+            // Добавление серии в гистограмму
+            chartExp.Series.Add(s);
+            double interval = (arr.Max() - arr.Min()) / (double)countIntervals;
+            chartExp.DataManipulator.Sort(PointSortOrder.Ascending, "X", "Испытание");
+            chartExp.DataManipulator.Group("Count", interval, IntervalType.Number, "Испытание");
+        }
+        // Построить Гиперэксп
+        private void button18_Click(object sender, EventArgs e)
+        {
+            chartGExp.Series.Clear();
+            int size = Convert.ToInt32(textBox34.Text);
+            int countIntervals = Convert.ToInt32(textBox36.Text);
+            Series s = new Series { Name = "Испытание" };
+            countGExpSeries++;
 
-                foreach (var value in values)
-                    arr[(int)value]++;
+            double[] arr = Algs.GExp(countIntervals, size, listBox6.SelectedIndex);
 
-                // Добавление данных в серию
-                for (int i = 0; i < countIntervals; i++)
-                    seriesMass[s].Points.AddXY(i + 1, arr[i]);
-                // Добавление серии в гистограмму
-                chartExp.Series.Add(seriesMass[s]);
-            }
+
+            // Добавление данных в серию
+            for (int i = 0; i < size; i++)
+                s.Points.AddXY(arr[i], 1);
+            // Добавление серии в гистограмму
+            chartGExp.Series.Add(s);
+            double interval = (arr.Max() - arr.Min()) / (double)countIntervals;
+            chartGExp.DataManipulator.Sort(PointSortOrder.Ascending, "X", "Испытание");
+            chartGExp.DataManipulator.Group("Count", interval, IntervalType.Number, "Испытание");
+
         }
         // Очистить эралнга
         private void button15_Click(object sender, EventArgs e)
@@ -303,10 +354,9 @@ namespace ISModeling {
 
                 // Добавление данных в серию
                 for (int i = 0; i < countIntervals; i++)
-                    seriesMass[s].Points.AddXY(i + 1, arr[i]);
+                    seriesMass[s].Points.AddXY(i + 1,arr[i]);
                 // Добавление серии в гистограмму
-                chartErl.Series.Add(seriesMass[s]);
-            }
+                chartErl.Series.Add(seriesMass[s]);            }
         }
 
         class Algs {
@@ -451,6 +501,35 @@ namespace ISModeling {
                 return mass;
             }
 
+            public static double[] Muller(int n, int s, int AlgIndex)
+            {
+                double[] mass = new double[s];
+
+                double[] x = new double[s * 2];
+
+                switch (AlgIndex) {
+                    case (-1):
+                    case (0):
+                        x = Algs.CSRandom(s * 2);
+                        break;
+                    case (1):
+                        x = Algs.SCongruence(n, s * 2);
+                        break;
+                    case (2):
+                        x = Algs.Lehmer(s * 2);
+                        break;
+                }
+
+                for (int i = 0; i < s - 1; i++) {
+                    for (int j = i * 2; j < (i + 1) * 2; j++) {
+                        mass[i] = (-6 + Math.Sqrt(-2 * Math.Log(x[j]))) *  (-6 + Math.Sin(2 * Math.PI * x[j + 1]));
+                    }
+                        
+                }
+
+                return mass;
+            }
+
             public static double[] Exp(int n, int s, double L, int AlgIndex)
             {
                 double[] mass = new double[s];
@@ -496,6 +575,283 @@ namespace ISModeling {
 
                 return mass;
             }
+
+            public static double[] GExp(int n, int s, int AlgIndex)
+            {
+                double[] mass = new double[s];
+
+                double[] x = new double[s];
+
+                switch (AlgIndex) {
+                    case (-1):
+                    case (0):
+                        x = Algs.CSRandom(s);
+                        break;
+                    case (1):
+                        x = Algs.SCongruence(n, s);
+                        break;
+                    case (2):
+                        x = Algs.Lehmer(s);
+                        break;
+                }
+
+                for (int i = 0; i < s; i++) {
+
+                    mass[i] = Math.Pow(-Math.Log(x[i]) / 1, 1.3);
+                }
+
+                return mass;
+            }
         }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            chart7.Series[0].Points.Clear();
+            chart7.Series[1].Points.Clear();
+            chart7.Series[2].Points.Clear();
+            chart7.Series[3].Points.Clear();
+            chart7.Series[4].Points.Clear();
+            chart7.Series[5].Points.Clear();
+            int[,] maxRealisedProducts = new int[6, 6] { 
+                {0, 45,  25,  15,  8,  3, },
+                { 200, 0,   60,  40,  20,  10 },
+                { 290, 155, 0,   65,  32,  17},
+                { 380, 210, 130, 0,   44,  24},
+                { 470, 265, 165, 115,  0,   31},
+                { 560, 320, 200, 140, 68,  0 } ,};
+            int[] minProductsStorage = new int[6];
+            minProductsStorage[0] = int.Parse(textBox111.Text);
+            minProductsStorage[1] = int.Parse(textBox112.Text);
+            minProductsStorage[2] = int.Parse(textBox113.Text);
+            minProductsStorage[3] = int.Parse(textBox114.Text);
+            minProductsStorage[4] = int.Parse(textBox115.Text);
+            minProductsStorage[5] = int.Parse(textBox116.Text);
+            int[] deliveryProductsStorage = new int[6];
+            deliveryProductsStorage[0] = int.Parse(textBox121.Text);
+            deliveryProductsStorage[1] = int.Parse(textBox122.Text);
+            deliveryProductsStorage[2] = int.Parse(textBox123.Text);
+            deliveryProductsStorage[3] = int.Parse(textBox124.Text);
+            deliveryProductsStorage[4] = int.Parse(textBox125.Text);
+            deliveryProductsStorage[5] = int.Parse(textBox126.Text);
+            int[] currentProductStorage = new int[6] { 2000, 1000, 600, 400, 150, 50 }; 
+            int[] allProductRequest = new int[6] { 0, 0, 0, 0, 0, 0 }; 
+            int[] quantityMissingProducts = new int[6] { 0, 0, 0, 0, 0, 0 };
+            Random random = new Random();
+            for (int currentDay = 0; currentDay < 3000; currentDay++) {
+                int[,] currentEveryRequest = new int[6, 6];
+                switch (listBox7.SelectedIndex) {
+                    case -1:
+                    case 0:
+                        for (int consumer = 0; consumer < 6; consumer++) {
+                            for (int product = 0; product < 6; product++) {
+                                currentEveryRequest[consumer, product] = random.Next(0, maxRealisedProducts[consumer, product]);
+                            }
+                        }
+                        break;
+                    case 1:
+                        for (int consumer = 0; consumer < 6; consumer++) {
+                            for (int product = 0; product < 6; product++) {
+                                currentEveryRequest[consumer, product] = random.Next(0, maxRealisedProducts[consumer, product] / 2) + random.Next(0, maxRealisedProducts[consumer, product] / 2);
+                            }
+                        }
+                        break;
+                    case 2:
+                        for (int consumer = 0; consumer < 6; consumer++) {
+                            for (int product = 0; product < 6; product++) {
+                                currentEveryRequest[consumer, product] = (int)(maxRealisedProducts[consumer, product] / 2 + Math.Sqrt(12 / 12) * (random.NextDouble() + random.NextDouble() + random.NextDouble() + random.NextDouble() - 2) / 2);
+                            }
+                        }
+                        break;
+
+                }
+                
+                int[] currentProductRequest = new int[6];
+                for (int product = 0; product < 6; product++) {
+                    for (int consumer = 0; consumer < 6; consumer++) {
+                        currentProductRequest[product] += currentEveryRequest[consumer, product];
+                    }
+                    allProductRequest[product] += currentProductRequest[product];
+                    currentProductStorage[product] -= currentProductRequest[product];
+                    if (currentProductStorage[product] < 0) {
+                        quantityMissingProducts[product] += Math.Abs(currentProductStorage[product]);
+                        currentProductStorage[product] = deliveryProductsStorage[product];
+                    }
+                    else {
+                        if (currentProductStorage[product] < minProductsStorage[product]) {
+                            currentProductStorage[product] += deliveryProductsStorage[product];
+                        }
+                    }
+                    chart7.Series[product].Points.AddXY(currentDay, allProductRequest[product] - quantityMissingProducts[product]);
+                } 
+            }
+            double allRequest = allProductRequest.Sum();
+            double allMissing = quantityMissingProducts.Sum();
+            double precentCompleteRequest = 100 - (allMissing / allRequest) * 100;
+            textBox27.Text = Math.Round(precentCompleteRequest, 2).ToString() + "%";
+        }
+
+
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Queue<int> tasks1 = new Queue<int>();
+            Queue<int> tasks2 = new Queue<int>();
+            int maxTimeToType = Convert.ToInt32(textBox202.Text);
+            int maxTimeToProc = Convert.ToInt32(textBox203.Text);
+            int maxTimeToPrint = Convert.ToInt32(textBox204.Text);
+            int targetTime = Convert.ToInt32(textBox201.Text);
+            tasks1.Enqueue(1);
+            tasks2.Enqueue(1);
+            int sumTimeKlav = 0;
+            int numTimeKlav = 0;
+            int sumTimeProc = 0;
+            int numTimeProc = 0;
+            int sumTimePrint = 0;
+            int numTimePrint = 0;
+            int sumNumOfTasks = 0;
+            int stopPrint = 0;
+            int stopProc1 = 0;
+            int stopProc2 = 0;
+            int stopKlav = 0;
+            bool isFirstMachineWork = false;
+            int endOfFirst = 10;
+            int endOfSecond = 10;
+            bool isSecondMachineWork = false;
+            bool isPrinterReady = true;
+            int endOfPrint = -1;
+            int endOfType = -1;
+            bool isTypoReady = true;
+            Queue<int> toPrint = new Queue<int>();
+            Random r1 = new Random();
+            Random r2 = new Random();
+            for (int i = 0; i < targetTime; i++) {
+                if (i == endOfType) {
+                    Random r = new Random();
+                    var task = r.Next(1, 2);
+                    if (task == 1)
+                        tasks1.Enqueue(1);
+                    else
+                        tasks2.Enqueue(1);
+                    isTypoReady = true;
+                }
+                if (i == endOfPrint) {
+                    isPrinterReady = true;
+                    if (toPrint.Any()) {
+                        toPrint.Dequeue();
+                        isPrinterReady = false;
+                        var time = GetTime(maxTimeToPrint, r1);
+                        endOfPrint = i + time;
+                        sumTimePrint += time;
+                        numTimePrint++;
+                    }
+                }
+                if (i == endOfFirst) {
+                    isFirstMachineWork = false;
+                    sumNumOfTasks++;
+                    if (isPrinterReady) {
+                        isPrinterReady = false;
+                        var time = GetTime(maxTimeToPrint, r1);
+                        endOfPrint = i + time;
+                        sumTimePrint += time;
+                        numTimePrint++;
+                    } else
+                        toPrint.Enqueue(1);
+                }
+                if (i == endOfSecond) {
+                    isSecondMachineWork = false;
+                    sumNumOfTasks++;
+                    if (isPrinterReady) {
+                        isPrinterReady = false;
+                        var time = GetTime(maxTimeToPrint, r1);
+                        endOfPrint = i + time;
+                        sumTimePrint += time;
+                        numTimePrint++;
+                    } else {
+                        toPrint.Enqueue(1);
+                    }
+                }
+                if (!isFirstMachineWork) {
+                    if (tasks2.Any()) {
+                        var time = GetTime(maxTimeToProc, r1);
+                        endOfFirst = i + time;
+                        sumTimeProc += time;
+                        numTimeProc++;
+                        isFirstMachineWork = true;
+                        tasks2.Dequeue();
+                    }
+                    else {
+                        if (tasks1.Any()) {
+                            var time = GetTime(maxTimeToProc, r1);
+                            endOfFirst = i + time;
+                            sumTimeProc += time;
+                            numTimeProc++;
+                            isFirstMachineWork = true;
+                            tasks1.Dequeue();
+                        }
+                    }
+                }
+                if (!isSecondMachineWork) {
+                    if (tasks2.Any()) {
+                        var time = GetTime(maxTimeToProc, r1);
+                        endOfSecond = i + time;
+                        sumTimeProc += time;
+                        numTimeProc++;
+                        isSecondMachineWork = true;
+                        tasks2.Dequeue();
+                    }
+                    else {
+                        if (tasks1.Any()) {
+                            var time = GetTime(maxTimeToProc, r1);
+                            endOfSecond = i + time;
+                            sumTimeProc += time;
+                            numTimeProc++;
+                            isSecondMachineWork = true;
+                            tasks1.Dequeue();
+                        }
+                    }
+                }
+                if (isStartOfPrint(r2) && isTypoReady) {
+                    isTypoReady = false;
+                    var time = GetTime(maxTimeToType, r1);
+                    endOfType = i + time;
+                    sumTimeKlav += time;
+                    numTimeKlav++;
+                }
+                if (isPrinterReady) {
+                    stopPrint++;
+                }
+                if (isFirstMachineWork) {
+                    stopProc1++;
+                }
+                if (isSecondMachineWork) {
+                    stopProc2++;
+                }
+                if (!(isStartOfPrint(r2) && isTypoReady)) {
+                    stopKlav++;
+                }
+            }
+            textBox205.Text = Convert.ToString(sumNumOfTasks);
+            if (numTimeKlav != 0) {
+                textBox206.Text = Convert.ToString(sumTimeKlav / numTimeKlav);
+            }
+            if (numTimeProc != 0) { textBox208.Text = Convert.ToString(sumTimeProc / numTimeProc); }
+            if (numTimePrint != 0) { textBox209.Text = Convert.ToString(sumTimePrint / numTimePrint); }
+
+            textBox207.Text = Convert.ToString(sumTimeKlav);
+            textBox211.Text = Convert.ToString(sumTimeProc);
+            textBox212.Text = Convert.ToString(sumTimePrint);
+            textBox214.Text = Convert.ToString(stopPrint);
+            textBox213.Text = Convert.ToString(stopKlav);
+        }
+        private int GetTime(int x, Random r)
+        {
+            return r.Next(1, x);
+        }
+
+        private bool isStartOfPrint(Random r)
+        {
+            return r.Next(1, 100) < 20;
+        }
+
     }
 }
